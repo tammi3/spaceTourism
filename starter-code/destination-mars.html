@@ -1,37 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../src/output.css" rel="stylesheet" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+    <title>Frontend Mentor | Space tourism website</title>
+  </head>
+  <body class="bg-very-dark-navy">
+    <div
+      class="absolute z-50 w-full text-white top-0 right-0 flex justify-between p-10"
+    >
+      <div class="absolute z-50 flex w-2/4 items-center -mr-8">
+        <img class="pr-16" src="./assets/shared/logo.svg" alt="" />
+        <div class="border-solid border-b border-dark-gray w-full"></div>
+      </div>
+      <div
+        class="font-barlowCondensed uppercase text-base tracking-nav backdrop-blur-4xl flex gap-12 py-4 px-16 w-2/4 absolute m-auto right-0"
+      >
+        <a class="flex gap-3 justify-center items-center" href=""
+          ><span class="font-bold">00</span>Home</a
+        ><a
+          class="flex gap-3 justify-center items-center"
+          href="../starter-code/destination-mars.html"
+          ><span class="font-bold">01</span>Destination</a
+        >
+        <a class="flex gap-3 justify-center items-center" href=""
+          ><span class="font-bold">02</span>Crew</a
+        >
+        <a class="flex gap-3 justify-center items-center" href=""
+          ><span class="font-bold">03</span>Technology</a
+        >
+      </div>
+    </div>
+
+    <div class="absolute bottom-0 py-12 px-32 text-white">
+      <div class="absolute top-0 mb-12 text-gray-500 font-barlowCondensed text-2.5xl tracking-heroText uppercase font-bold ">01 <span class="text-light-blue font-barlowCondensed text-2.5xl tracking-heroText uppercase font-normal">Pick your destination</span></div>
+      <div class="flex justify-center items-center w-full py-8 gap-8">
+        <div class="w-2/4">
+          <img class="w-3/4" src="../starter-code/assets/destination/image-mars.png" alt="">
+        </div>
   
-  <title>Frontend Mentor | Space tourism website</title>
-</head>
-<body>
-
-  00 Home
-  01 Destination
-  02 Crew
-  03 Technology
-
-  01 Pick your destination
-
-  Moon
-  Mars
-  Europa
-  Titan
-
-  Mars
-
-  Don’t forget to pack your hiking boots. You’ll need them to tackle Olympus Mons, 
-  the tallest planetary mountain in our solar system. It’s two and a half times 
-  the size of Everest!
-
-  Avg. distance
-  225 mil. km
-
-  Est. travel time
-  9 months
-</body>
+        <div>
+          <div><a href="">Moon</a> <a href="">Mars</a> <a href="">Europa</a> <a href="">Titan</a></div>
+  
+          <div >
+            <div>Mars</div>
+  
+            <div>
+              Don’t forget to pack your hiking boots. You’ll need them to tackle
+              Olympus Mons, the tallest planetary mountain in our solar system.
+              It’s two and a half times the size of Everest!
+            </div>
+          </div>
+  
+          <div>
+            <div>Avg. distance 225 mil. km</div>
+  
+            <div>Est. travel time 9 months</div>
+          </div>
+        </div>
+      </div>
+     
+    </div>
+  </body>
 </html>

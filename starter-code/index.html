@@ -13,34 +13,56 @@
 
     <title>Frontend Mentor | Space tourism website</title>
   </head>
-  <body>
+  <body class="h-dvh">
     <div
-      class="absolute z-40 w-full text-white top-0 right-0 flex justify-between p-10"
+      class="absolute z-50 w-full text-white top-0 right-0 flex justify-between p-10"
     >
-      <div class="flex justify-between w-2/4 items-center">
-        <img src="./assets/shared/logo.svg" alt="" />
+      <div class="absolute z-50 flex w-2/4 items-center -mr-8">
+        <img class="pr-16" src="./assets/shared/logo.svg" alt="" />
+        <div class="border-solid border-b border-dark-gray w-full"></div>
       </div>
       <div
         class="font-barlowCondensed uppercase text-base tracking-nav backdrop-blur-4xl flex gap-12 py-4 px-16 w-2/4 absolute m-auto right-0"
       >
-        <a class="flex gap-3" href=""><span class="font-bold ">00</span>Home</a
-        ><a class="flex gap-3" href=""><span class="font-bold ">01</span>Destination</a>
-        <a class="flex gap-3" href=""><span class="font-bold ">02</span>Crew</a> 
-        <a class="flex gap-3" href=""><span class="font-bold ">03</span>Technology</a>
+        <a class="flex gap-3 justify-center items-center" href=""
+          ><span class="font-bold">00</span>Home</a
+        ><a class="flex gap-3 justify-center items-center" href="../starter-code/destination-mars.html"
+          ><span class="font-bold">01</span>Destination</a
+        >
+        <a class="flex gap-3 justify-center items-center" href=""
+          ><span class="font-bold">02</span>Crew</a
+        >
+        <a class="flex gap-3 justify-center items-center" href=""
+          ><span class="font-bold">03</span>Technology</a
+        >
       </div>
     </div>
-    <div class="relative w-full h-100 p-24">
-      <img
-        class="absolute w-full top-0 right-0 object-cover"
-        src="./assets/home/background-home-desktop.jpg"
-        alt=""
-      />
-      <div class="relative text-gray-50">
-        <p class="text-light-blue">So, you want to travel to</p>
-        Space Let’s face it; if you want to go to space, you might as well
-        genuinely go to outer space and not hover kind of on the edge of it.
-        Well sit back, and relax because we’ll give you a truly out of this
-        world experience! Explore
+    <img
+      class="absolute w-full top-0 right-0 object-cover"
+      src="./assets/home/background-home-desktop.jpg"
+      alt=""
+    />
+    <div class="absolute bottom-0 p-32 flex">
+      <div class="w-2/4 text-left">
+        <div
+          class="text-light-blue font-barlowCondensed text-2.5xl tracking-heroText uppercase"
+        >
+          So, you want to travel to
+        </div>
+        <div class="font-Bellefair text-10xl uppercase text-white">Space</div>
+        <div class="font-Barlow text-lg text-light-blue">
+          Let’s face it; if you want to go to space, you might as well genuinely
+          go to outer space and not hover kind of on the edge of it. Well sit
+          back, and relax because we’ll give you a truly out of this world
+          experience!
+        </div>
+      </div>
+      <div class="flex justify-end align-content-end w-2/4">
+        <div
+          class=" relative rounded-full bg-white w-72 h-72 justify-center justify-items-center font-Bellefair text-4xl uppercase  "
+        >
+          <div class="absolute top-center w-full text-center">Explore</div>
+        </div>
       </div>
     </div>
   </body>
