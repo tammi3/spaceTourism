@@ -1,32 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../src/output.css" rel="stylesheet" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Space tourism website</title>
-</head>
-<body>
+    <title>Frontend Mentor | Space tourism website</title>
+  </head>
+  <body>
+    <div
+      class="absolute z-50 w-full text-white top-0 right-0 flex justify-between p-10"
+    >
+      <div class="absolute z-50 flex w-2/4 items-center -mr-8">
+        <a class="pr-16" href="../starter-code/index.html">
+          <img src="./assets/shared/logo.svg" alt=""
+        /></a>
+        <div class="border-solid border-b border-dark-gray w-full"></div>
+      </div>
+      <div
+        class="font-barlowCondensed uppercase text-base tracking-nav backdrop-blur-4xl flex gap-12 py-4 px-16 w-2/4 absolute m-auto right-0"
+      >
+        <a
+          class="flex gap-3 justify-center items-center"
+          href="../starter-code/index.html"
+          ><span class="font-bold">00</span>Home</a
+        ><a
+          class="flex gap-3 justify-center items-center"
+          href="../starter-code/destination-moon.html"
+          ><span class="font-bold">01</span>Destination</a
+        >
+        <a
+          class="flex gap-3 justify-center items-center"
+          href="../starter-code/crew-commander.html"
+          ><span class="font-bold">02</span>Crew</a
+        >
+        <a
+          class="flex gap-3 justify-center items-center"
+          href="../starter-code/technology-vehicle.html"
+          ><span class="font-bold">03</span>Technology</a
+        >
+      </div>
+    </div>
+    <img
+      class="absolute w-full h-full top-0 right-0 object-cover"
+      src="./assets/technology/background-technology-desktop.jpg"
+      alt=""
+    />
+    <div
+      class="absolute z-100 top-0 m-32 text-gray-500 font-barlowCondensed text-2.5xl tracking-heroText md:uppercase font-bold"
+    >
+      03
+      <span
+        class="text-light-blue font-barlowCondensed text-2.5xl tracking-heroText font-normal"
+        >Space launch 101</span
+      >
+    </div>
+    
 
-  00 Home
-  01 Destination
-  02 Crew
-  03 Technology
+    <div class="absolute bottom-0 right-0 pb-10 pl-32 text-white">
+      <div class="relative flex justify-center items-center w-full">
+        <div class="flex w-2/4">
+          <div class="flex w-1/4  flex-col">
+            <a class="w-16 h-16 mb-4 rounded-full  border-dark-gray border-solid border flex justify-center items-center" href="../starter-code/technology-vehicle.html">1</a>
+            <a class="w-16 h-16 mb-4 rounded-full  border-dark-gray border-solid border flex justify-center items-center" href="../starter-code/technology-spaceport.html">2</a>
+            <a class="w-16 h-16 mb-4 rounded-full  border-dark-gray border-solid border flex justify-center items-center" href="../starter-code/technology-capsule.html">3</a>
+          </div>
+          <div class="w-3/4">
+            <div>The terminology...</div>
+            <div>Launch vehicle</div>
 
-  03 Space launch 101
-
-  1
-  2
-  3
-
-  The terminology...
-  Launch vehicle
-
-  A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a 
-  payload from Earth's surface to space, usually to Earth orbit or beyond. Our 
-  WEB-X carrier rocket is the most powerful in operation. Standing 150 metres tall, 
-  it's quite an awe-inspiring sight on the launch pad!
-</body>
+           <div>
+            A launch vehicle or carrier rocket is a rocket-propelled vehicle
+            used to carry a payload from Earth's surface to space, usually to
+            Earth orbit or beyond. Our WEB-X carrier rocket is the most powerful
+            in operation. Standing 150 metres tall, it's quite an awe-inspiring
+            sight on the launch pad!
+           </div>
+          </div>
+        </div>
+        <div class="w-2/4">
+          <img
+            src="../starter-code/assets/technology/image-launch-vehicle-portrait.jpg"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+  </body>
 </html>

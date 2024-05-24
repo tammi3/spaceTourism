@@ -1,13 +1,16 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./starter-code/**/*.{html,js}"] ,
+  content: ["./starter-code/**/*.{html,js}"],
   theme: {
     extend: {
       fontSize: {
         '2.5xl': '28px',
+        '3.5xl': '32px',
+        '5.5xl': '56px',
         '10xl': '144px'},
       letterSpacing: {
         nav: "2.7px",
+        '2px': "2px",
         heroText: "4px"
       },
       fontFamily: {
@@ -25,6 +28,12 @@ module.exports = {
       },
       spacing: {
         'center': '45%',
+      },
+      width: {
+        '': '32rem',
+      },
+      zIndex: {
+        '100': '100',
       }
     },
   },
