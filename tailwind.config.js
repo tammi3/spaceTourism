@@ -4,14 +4,15 @@ module.exports = {
   theme: {
     extend: {
       fontSize: {
-        '2.5xl': '28px',
-        '3.5xl': '32px',
-        '5.5xl': '56px',
-        '10xl': '144px'},
+        "2.5xl": "28px",
+        "3.5xl": "32px",
+        "5.5xl": "56px",
+        "10xl": "144px",
+      },
       letterSpacing: {
         nav: "2.7px",
-        '2px': "2px",
-        heroText: "4px"
+        "2px": "2px",
+        heroText: "4px",
       },
       fontFamily: {
         barlowCondensed: ["Barlow Condensed"],
@@ -19,22 +20,22 @@ module.exports = {
         Bellefair: ["Bellefair"],
       },
       backdropBlur: {
-        '4xl': '80px',
+        "4xl": "150px",
       },
       colors: {
         "light-blue": "#D0D6F9",
         "very-dark-navy": "#0B0D17",
-        "dark-gray": "#979797"
+        "dark-gray": "#979797",
       },
       spacing: {
-        'center': '45%',
+        98: "400px",
       },
-      width: {
-        '': '32rem',
+      animation: {
+        'spin-slow': 'spin 250s linear infinite',
       },
       zIndex: {
-        '100': '100',
-      }
+        100: "100",
+      },
     },
   },
   plugins: [],
