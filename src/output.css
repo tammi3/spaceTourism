@@ -724,6 +724,10 @@ video {
   border-bottom-width: 1px;
 }
 
+.border-b-2{
+  border-bottom-width: 2px;
+}
+
 .border-solid{
   border-style: solid;
 }
@@ -731,6 +735,15 @@ video {
 .border-dark-gray{
   --tw-border-opacity: 1;
   border-color: rgb(151 151 151 / var(--tw-border-opacity));
+}
+
+.border-white\/50{
+  border-color: rgb(255 255 255 / 0.5);
+}
+
+.border-white{
+  --tw-border-opacity: 1;
+  border-color: rgb(255 255 255 / var(--tw-border-opacity));
 }
 
 .bg-dark-gray{
