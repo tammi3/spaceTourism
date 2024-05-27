@@ -21,6 +21,7 @@ module.exports = {
       },
       backdropBlur: {
         "4xl": "150px",
+        "5xl": "250px",
       },
       colors: {
         "light-blue": "#D0D6F9",
