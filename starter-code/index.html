@@ -16,33 +16,38 @@
   <body>
     <div id="vue-app">
       <div
-        class="absolute z-100 lg:z-50 w-full text-white top-0 right-0 flex items-center p-10"
+        class="absolute z-100 lg:z-50 w-full text-white top-0 right-0 flex items-center py-7 pl-20"
       >
-        <div id="logo" class=" z-50 flex w-full items-center md:-mr-8">
-          <a class="lg:pr-16" href="../starter-code/index.html">
-            <img src="./assets/shared/logo.svg" alt=""
+        <div
+          class="z-50 flex w-full absolute lg:relative px-8 py-2 sm:p-8 top-0 left-0 justify-start items-center md:-mr-16"
+        >
+          <a class="pt-2 lg:pt-0 lg:pr-16" href="../starter-code/index.html">
+            <img class="w-full" src="./assets/shared/logo.svg" alt=""
           /></a>
           <div
-            class="hidden lg:block border-solid border-b border-dark-gray w-full"
+            class="hidden lg:block border-solid border-b border-dark-gray w-full z-100"
           ></div>
+          <div
+            class="px-4 cursor-pointer flex w-full justify-end p-8 md:hidden"
+            id="burger"
+            @click="toggleMenu"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="21">
+              <g fill="#D0D6F9" fill-rule="evenodd">
+                <path d="M0 0h24v3H0zM0 9h24v3H0zM0 18h24v3H0z" />
+              </g>
+            </svg>
+          </div>
         </div>
-        <div
-          class="px-4 cursor-pointer md:hidden"
-          id="burger"
-          @click="toggleMenu"
-        >
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="21">
-            <g fill="#D0D6F9" fill-rule="evenodd">
-              <path d="M0 0h24v3H0zM0 9h24v3H0zM0 18h24v3H0z" />
-            </g>
-          </svg>
-        </div>
+
         <div
           id="menu"
-          class="hidden font-barlowCondensed uppercase text-base tracking-nav backdrop-blur-5xl md:backdrop-blur-4xl md:flex justify-center items-center md:pt-6 md:px-16 md:w-full"
+          class="hidden w-full font-barlowCondensed uppercase text-base tracking-nav backdrop-blur-5xl md:backdrop-blur-4xl md:flex justify-center items-center md:pt-6 md:px-16 md:w-full"
         >
-          <div class="cursor-pointer md:hidden flex justify-end pr-16"
-          @click="toggleMenu">
+          <div
+            class="cursor-pointer md:hidden flex justify-end pr-16 py-8"
+            @click="toggleMenu"
+          >
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21">
               <g fill="#D0D6F9" fill-rule="evenodd">
                 <path d="M2.575.954l16.97 16.97-2.12 2.122L.455 3.076z" />
@@ -50,90 +55,103 @@
               </g>
             </svg>
           </div>
-          <div class="flex flex-col md:flex-row justify-start pl-12 md:pl-0 gap-12 pr-48 md:pr-0 pb-48 md:pb-0">
+          <div
+            class="flex flex-col md:flex-row justify-start pl-12 md:pl-0 gap-12 pr-24 sm:pr-40 md:pr-0 pb-48 md:pb-0"
+          >
             <a
               class="border-white border-solid border-b-2 hover:border-white/50 hover:border-solid hover:border-b-2 transition-all duration-75 ease-linear"
               href="../starter-code/index.html"
-              ><div class="mb-6 flex gap-3 justify-center items-center">
+              ><div
+                class="mb-6 flex gap-3 justify-start md:justify-center items-center"
+              >
                 <span class="font-bold">00</span>Home
               </div></a
             >
             <a
               class="hover:border-white/50 hover:border-solid hover:border-b-2 transition-all duration-75 ease-linear"
               href="../starter-code/destination-moon.html"
-              ><div class="mb-6 flex gap-3 justify-center items-center">
+              ><div
+                class="mb-6 flex gap-3 justify-start md:justify-center items-center"
+              >
                 <span class="font-bold">01</span>Destination
               </div>
             </a>
             <a
               class="hover:border-white/50 hover:border-solid hover:border-b-2 transition-all duration-75 ease-linear"
               href="../starter-code/crew-commander.html"
-              ><div class="mb-6 flex gap-3 justify-center items-center">
+              ><div
+                class="mb-6 flex gap-3 justify-start md:justify-center items-center"
+              >
                 <span class="font-bold">02</span>Crew
               </div></a
             >
             <a
               class="hover:border-white/50 hover:border-solid hover:border-b-2 transition-all duration-75 ease-linear"
               href="../starter-code/technology-vehicle.html"
-              ><div class="mb-6 flex gap-3 justify-center items-center">
+              ><div
+                class="mb-6 flex gap-3 justify-start md:justify-center items-center"
+              >
                 <span class="font-bold">03</span>Technology
               </div></a
             >
           </div>
         </div>
       </div>
-      <img
-        class="absolute w-full h-full top-0 right-0 object-cover md:hidden lg:hidden"
-        src="./assets/home/background-home-mobile.jpg"
-        alt=""
-      />
-      <img
-        class="absolute w-full h-full top-0 right-0 object-cover hidden md:block lg:hidden"
-        src="./assets/home/background-home-tablet.jpg"
-        alt=""
-      />
-      <img
-        class="absolute w-full h-full top-0 right-0 object-cover hidden lg:block"
-        src="./assets/home/background-home-desktop.jpg"
-        alt=""
-      />
+
       <div
-        class="sm:py-28 py-6 px-12 md:pb-0 lg:p-16 xl:p-32 absolute bottom-0 w-full"
+        class="min-h-screen w-full pt-14 px-12 sm:py-28 md:pb-0 lg:px-16 xl:px-32 flex justify-center items-center"
       >
-        <div
-          class="relative flex flex-col lg:flex-row justify-center items-center w-full"
-        >
-          <div class="lg:w-2/4 w-full text-center pb-2 lg:pb-0 lg:text-left">
-            <div
-              class="text-light-blue font-barlowCondensed text-xl sm:text-2xl lg:text-2.5xl tracking-heroText uppercase"
-            >
-              So, you want to travel to
-            </div>
-            <div
-              class="font-Bellefair text-6xl sm:text-7xl md:text-9xl lg:text-10xl py-6 uppercase text-white"
-            >
-              Space
-            </div>
-            <div class="font-Barlow text-base sm:text-lg text-light-blue">
-              Let’s face it; if you want to go to space, you might as well
-              genuinely go to outer space and not hover kind of on the edge of
-              it. Well sit back, and relax because we’ll give you a truly out of
-              this world experience!
-            </div>
-          </div>
+        <img
+          class="absolute w-full h-full top-0 right-0 object-cover md:hidden lg:hidden"
+          src="./assets/home/background-home-mobile.jpg"
+          alt=""
+        />
+        <img
+          class="absolute w-full h-full top-0 right-0 object-cover hidden md:block lg:hidden"
+          src="./assets/home/background-home-tablet.jpg"
+          alt=""
+        />
+        <img
+          class="absolute w-full h-full top-0 right-0 object-cover hidden lg:block"
+          src="./assets/home/background-home-desktop.jpg"
+          alt=""
+        />
+        <div class="relative w-full">
           <div
-            class="flex justify-center items-center sm:py-6 lg:justify-end lg:align-content-end w-full lg:w-2/4"
+            class="relative flex flex-col lg:flex-row justify-center items-center w-full"
           >
-            <a
-              href="../starter-code/destination-moon.html"
-              class="flex rounded-full hover:bg-white/30 hover:bg-opacity-10 w-52 h-52 sm:w-64 sm:h-64 md:w-72 md:h-72 lg:w-98 lg:h-98 justify-center items-center font-Bellefair text-2xl sm:text-3xl md:text-4xl uppercase transition-all duration-300 ease-linear"
-            >
+            <div class="lg:w-2/4 w-full text-center pb-2 lg:pb-0 lg:text-left">
               <div
-                class="bg-white flex justify-center items-center w-40 h-40 sm:w-56 sm:h-56 md:w-64 md:h-64 lg:w-72 lg:h-72 rounded-full"
+                class="text-light-blue font-barlowCondensed text-xl sm:text-2xl lg:text-2.5xl tracking-heroText uppercase"
               >
-                Explore
+                So, you want to travel to
               </div>
-            </a>
+              <div
+                class="font-Bellefair text-6xl sm:text-7xl md:text-9xl lg:text-10xl py-6 uppercase text-white"
+              >
+                Space
+              </div>
+              <div class="font-Barlow text-base sm:text-lg text-light-blue">
+                Let’s face it; if you want to go to space, you might as well
+                genuinely go to outer space and not hover kind of on the edge of
+                it. Well sit back, and relax because we’ll give you a truly out
+                of this world experience!
+              </div>
+            </div>
+            <div
+              class="flex justify-center items-center sm:py-6 lg:justify-end lg:align-content-end w-full lg:w-2/4"
+            >
+              <a
+                href="../starter-code/destination-moon.html"
+                class="flex rounded-full hover:bg-white/30 hover:bg-opacity-10 w-52 h-52 sm:w-64 sm:h-64 md:w-72 md:h-72 lg:w-98 lg:h-98 justify-center items-center font-Bellefair text-2xl sm:text-3xl md:text-4xl uppercase transition-all duration-300 ease-linear"
+              >
+                <div
+                  class="bg-white flex justify-center items-center w-40 h-40 sm:w-56 sm:h-56 md:w-64 md:h-64 lg:w-72 lg:h-72 rounded-full"
+                >
+                  Explore
+                </div>
+              </a>
+            </div>
           </div>
         </div>
       </div>
