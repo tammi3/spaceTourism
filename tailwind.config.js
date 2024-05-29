@@ -30,6 +30,7 @@ module.exports = {
       },
       spacing: {
         98: "400px",
+        30:"30%"
       },
       animation: {
         'spin-slow': 'spin 250s linear infinite',

@@ -16,102 +16,166 @@
   <body>
     <div id="vue-app">
       <div
-        class="absolute z-50 w-full text-white top-0 right-0 flex items-center mt-4 p-10"
+        class="absolute z-100 lg:z-50 w-full text-white top-0 right-0 flex items-center md:pb-7 md:pt-0 lg:py-7 pl-3 lg:pl-6 xl:pl-20"
       >
-        <div class="absolute z-50 flex w-2/4 items-center -mr-8">
-          <a class="pr-16" href="../starter-code/index.html">
-            <img src="./assets/shared/logo.svg" alt=""
-          /></a>
-          <div class="border-solid border-b border-dark-gray w-full"></div>
-        </div>
         <div
-          class="font-barlowCondensed uppercase text-base tracking-nav backdrop-blur-4xl flex gap-12 pt-6 px-16 w-2/4 absolute right-0"
+          class="z-50 flex w-full absolute lg:relative px-8 py-2 lg:p-8 top-0 left-0 justify-start items-center lg:-mr-16"
         >
-          <a
-            class="hover:border-white/50 hover:border-solid hover:border-b-2 transition-all duration-75 ease-linear"
-            href="../starter-code/index.html"
-            ><div class="mb-6 flex gap-3 justify-center items-center">
-              <span class="font-bold">00</span>Home
-            </div></a
+          <a class="pt-2 md:pt-4 lg:pt-0 lg:pr-16" href="../starter-code/index.html">
+            <img class="w-full" src="./assets/shared/logo.svg" alt=""
+          /></a>
+          <div
+            class="hidden lg:block border-solid border-b border-dark-gray w-full z-100"
+          ></div>
+          <div
+            class="px-4 cursor-pointer flex w-full justify-end p-8 md:hidden"
+            id="burger"
+            @click="toggleMenu"
           >
-          <a
-            class="hover:border-white/50 hover:border-solid hover:border-b-2 transition-all duration-75 ease-linear"
-            href="../starter-code/destination-moon.html"
-            ><div class="mb-6 flex gap-3 justify-center items-center">
-              <span class="font-bold">01</span>Destination
-            </div>
-          </a>
-          <a
-            class="border-white border-solid border-b-2 hover:border-white/50 hover:border-solid hover:border-b-2 transition-all duration-75 ease-linear"
-            href="../starter-code/crew-commander.html"
-            ><div class="mb-6 flex gap-3 justify-center items-center">
-              <span class="font-bold">02</span>Crew
-            </div></a
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="21">
+              <g fill="#D0D6F9" fill-rule="evenodd">
+                <path d="M0 0h24v3H0zM0 9h24v3H0zM0 18h24v3H0z" />
+              </g>
+            </svg>
+          </div>
+        </div>
+
+        <div
+          id="menu"
+          class="hidden w-full font-barlowCondensed ml-20 lg:ml-0 uppercase text-base tracking-nav backdrop-blur-5xl md:backdrop-blur-4xl md:flex justify-center items-center md:pt-8 lg:px-16 md:w-full"
+        >
+          <div
+            class="cursor-pointer md:hidden flex justify-end pr-16 py-8"
+            @click="toggleMenu"
           >
-          <a
-            class="hover:border-white/50 hover:border-solid hover:border-b-2 transition-all duration-75 ease-linear"
-            href="../starter-code/technology-vehicle.html"
-            ><div class="mb-6 flex gap-3 justify-center items-center">
-              <span class="font-bold">03</span>Technology
-            </div></a
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21">
+              <g fill="#D0D6F9" fill-rule="evenodd">
+                <path d="M2.575.954l16.97 16.97-2.12 2.122L.455 3.076z" />
+                <path d="M.454 17.925L17.424.955l2.122 2.12-16.97 16.97z" />
+              </g>
+            </svg>
+          </div>
+          <div
+            class="flex flex-col md:flex-row justify-start pl-12 md:pl-0 gap-12 pr-24 sm:pr-40 md:pr-0 pb-48 md:pb-0"
           >
+            <a
+              class=" hover:border-white/50 hover:border-solid hover:border-b-2 transition-all duration-75 ease-linear"
+              href="../starter-code/index.html"
+              ><div
+                class="mb-6 flex gap-3 justify-start md:justify-center items-center"
+              >
+                <span class="font-bold">00</span>Home
+              </div></a
+            >
+            <a
+              class="hover:border-white/50 hover:border-solid hover:border-b-2 transition-all duration-75 ease-linear"
+              href="../starter-code/destination-moon.html"
+              ><div
+                class="mb-6 flex gap-3 justify-start md:justify-center items-center"
+              >
+                <span class="font-bold">01</span>Destination
+              </div>
+            </a>
+            <a
+              class="border-white border-solid border-b-2 hover:border-white/50 hover:border-solid hover:border-b-2 transition-all duration-75 ease-linear"
+              href="../starter-code/crew-commander.html"
+              ><div
+                class="mb-6 flex gap-3 justify-start md:justify-center items-center"
+              >
+                <span class="font-bold">02</span>Crew
+              </div></a
+            >
+            <a
+              class="hover:border-white/50 hover:border-solid hover:border-b-2 transition-all duration-75 ease-linear"
+              href="../starter-code/technology-vehicle.html"
+              ><div
+                class="mb-6 flex gap-3 justify-start md:justify-center items-center"
+              >
+                <span class="font-bold">03</span>Technology
+              </div></a
+            >
+          </div>
         </div>
       </div>
-      <img
-        class="absolute w-full h-full top-0 right-0 object-cover"
-        src="./assets/crew/background-crew-desktop.jpg"
-        alt=""
-      />
+
       <div
-        class="absolute z-100 top-0 m-32 text-gray-500 font-barlowCondensed text-2.5xl tracking-heroText md:uppercase font-bold"
+        class="min-h-screen w-full pt-14 px-6 md:px-12 sm:py-28 md:pb-0 lg:px-16 xl:px-32 flex justify-center items-center text-white"
       >
-        02
-        <span
-          class="text-white font-barlowCondensed text-2.5xl tracking-heroText font-normal"
-          >Meet your crew</span
-        >
-      </div>
-
-      <div class="absolute bottom-0 pb-10 px-32 text-white">
-        <div class="relative flex justify-center items-center w-full">
-          <div class="w-2/4">
-            <div class="pb-6 w-3/4">
-              <div
-                class="font-Bellefair font-normal text-3.5xl uppercase text-dark-gray pb-4"
+        <img
+          class="absolute w-full h-full top-0 right-0 object-cover md:hidden lg:hidden"
+          src="./assets/crew/background-crew-mobile.jpg"
+          alt=""
+        />
+        <img
+          class="absolute w-full h-full top-0 right-0 object-cover hidden md:block lg:hidden"
+          src="./assets/crew/background-crew-tablet.jpg"
+          alt=""
+        />5
+        <img
+          class="absolute w-full h-full top-0 right-0 object-cover hidden lg:block"
+          src="./assets/crew/background-crew-desktop.jpg"
+          alt=""5
+        />
+        <div class="relative w-full">
+          <div class="relative w-full flex flex-col">
+            <div
+              class="pb-3 sm:pb-14 md:pb-8 lg:pb-0  text-gray-500 font-barlowCondensed text-base md:text-xl lg:text-2.5xl tracking-heroText uppercase font-bold"
+            >
+              02
+              <span5
+                class="text-white font-barlowCondensed pl-2 md:pl-4  font-normal"
+                >Meet your crew</span5
               >
-                Commander
-              </div>
-              <div class="font-Bellefair font-normal text-5.5xl uppercase">
-                Douglas Hurley
-              </div>
             </div>
+            <div
+              class="flex flex-col lg:flex-row items-center text-center lg:text-left lg:items-end w-full gap-3 lg:gap-12"
+            >
+              <div
+                class="flex flex-col items-center lg:items-start w-full lg:w-2/4"
+              >
+                <div class="pb-6 w-full">
+                  <div
+                    class="font-Bellefair font-normal text-xl sm:text-2.5xl xl:text-3.5xl uppercase text-dark-gray pb-1 lg:pb-4"
+                  >
+                    Commander
+                  </div>
+                  <div
+                    class="font-Bellefair font-normal text-lg sm:text-4xl xl:text-5xl uppercase"
+                  >
+                    Douglas Hurley
+                  </div>
+                </div>
 
-            <div class="font-Barlow font-normal text-lg text-light-blue w-3/4">
-              Douglas Gerald Hurley is an American engineer, former Marine Corps
-              pilot and former NASA astronaut. He launched into space for the
-              third time as commander of Crew Dragon Demo-2.
+                <div
+                  class="font-Barlow font-normal text-sm sm:text-base xl:text-lg text-light-blue w-full md:w-3/4"
+                >
+                  Douglas Gerald Hurley is an American engineer, former Marine
+                  Corps pilot and former NASA astronaut. He launched into space
+                  for the third time as commander of Crew Dragon Demo-2.
+                </div>
+                <div class="flex py-8 xl:py-16 justify-start">
+                  <a
+                    href="../starter-code/crew-commander.html"
+                    class="w-3 h-3 md:w-5 md:h-5 rounded-full bg-white hover:bg-dark-gray mr-4"
+                  ></a>
+                  <a
+                    href="../starter-code/crew-engineer.html"
+                    class="w-3 h-3 md:w-5 md:h-5 rounded-full bg-gray-600 hover:bg-dark-gray mr-4"
+                  ></a>
+                  <a
+                    href="../starter-code/crew-pilot.html"
+                    class="w-3 h-3 md:w-5 md:h-5 rounded-full bg-gray-600 hover:bg-dark-gray mr-4"
+                  ></a>
+                  <a
+                    href="../starter-code/crew-specialist.html"
+                    class="w-3 h-3 md:w-5 md:h-5 rounded-full bg-gray-600 hover:bg-dark-gray mr-4"
+                  ></a>
+                </div>
+              </div>
+              <div class="flex relative justify-center w-3/5 sm:w-3/4 md:w-2/5 lg:w-30 xl:w-2/5  2xl:w-2/4">
+                <img  src="./assets/crew/image-douglas-hurley.png" alt="" />
+              </div>
             </div>
-            <div class="flex absolute bottom-0 pb-12 justify-start">
-              <a
-                href="../starter-code/crew-commander.html"
-                class="w-6 h-6 rounded-full bg-white hover:bg-dark-gray mr-4"
-              ></a>
-              <a
-                href="../starter-code/crew-engineer.html"
-                class="w-6 h-6 rounded-full bg-gray-600 hover:bg-dark-gray mr-4"
-              ></a>
-              <a
-                href="../starter-code/crew-pilot.html"
-                class="w-6 h-6 rounded-full  bg-gray-600 hover:bg-dark-gray mr-4"
-              ></a>
-              <a
-                href="../starter-code/crew-specialist.html"
-                class="w-6 h-6 rounded-full  bg-gray-600 hover:bg-dark-gray mr-4"
-              ></a>
-            </div>
-          </div>
-          <div class="flex justify-end w-2/4">
-            <img src="./assets/crew/image-douglas-hurley.png" alt="" />
           </div>
         </div>
       </div>
