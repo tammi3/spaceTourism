@@ -16,19 +16,31 @@
   <body>
     <div id="vue-app" class="relative">
       <div
-        class="absolute z-100 lg:z-50 w-full text-white top-0 right-0 flex items-center py-7 pl-20"
+        class="absolute z-100 lg:z-50 w-full text-white top-0 right-0 lg:pt-10 flex items-center"
       >
         <div
-          class="z-50 flex w-full absolute lg:relative px-8 py-2 sm:p-8 top-0 left-0 justify-start items-center md:-mr-16"
+          id="nav-bar"
+          class="z-100 flex w-full absolute lg:relative px-8 py-2 sm:p-8 md:p-0 top-0 left-0 justify-start items-center"
         >
-          <a class="pt-2 lg:pt-0 lg:pr-16" href="../starter-code/index.html">
-            <img class="w-full" src="./assets/shared/logo.svg" alt=""
-          /></a>
           <div
-            class="hidden lg:block border-solid border-b border-dark-gray w-full z-100"
-          ></div>
+            class="w-full md:w-1/5 lg:w-full flex md:justify-start lg:justify-center md:items-center lg:-mr-8"
+          >
+            <a
+              id="logo"
+              class="pt-2 md:pl-8 lg:pl-16 xl:pl-20 lg:pr-12 xl:pr-16"
+              href="../starter-code/index.html"
+            >
+              <img
+                class="w-3/4 lg:w-full"
+                src="./assets/shared/logo.svg"
+                alt=""
+            /></a>
+            <div
+              class="hidden lg:block border-solid border-b border-dark-gray w-full z-100"
+            ></div>
+          </div>
           <div
-            class="px-4 cursor-pointer flex w-full justify-end p-8 md:hidden"
+            class="p-8 cursor-pointer flex w-full justify-end md:hidden"
             id="burger"
             @click="toggleMenu"
           >
@@ -40,7 +52,7 @@
           </div>
           <div
             id="menu"
-            class="hidden w-full font-barlowCondensed uppercase text-base tracking-nav backdrop-blur-5xl md:backdrop-blur-4xl md:flex justify-center items-center md:px-16 md:w-full"
+            class="hidden w-full font-barlowCondensed uppercase text-base tracking-nav backdrop-blur-5xl md:backdrop-blur-4xl md:flex justify-start lg:justify-center items-center md:px-16 md:pt-8"
           >
             <div
               class="cursor-pointer md:hidden flex justify-end pr-16 py-8"
@@ -118,7 +130,7 @@
         />
         <div class="relative w-full flex flex-col">
           <div
-            class="pb-3 sm:pb-14 md:pb-3 xl:pb-20 text-gray-500 font-barlowCondensed text-lg sm:text-xl lg:text-2.5xl tracking-heroText uppercase font-bold"
+            class="pb-3 sm:pb-14 md:pb-3 xl:pb-20 text-gray-500 font-barlowCondensed text-center md:text-left text-base sm:text-xl lg:text-2.5xl tracking-heroText uppercase font-bold"
           >
             01<span
               class="text-light-blue font-barlowCondensed tracking-heroText font-normal pl-3"

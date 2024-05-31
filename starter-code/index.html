@@ -20,18 +20,18 @@
       >
         <div
         id="nav-bar"
-          class="z-100  flex w-full absolute lg:relative px-8 py-2 sm:p-8 md:p-0 top-0 left-0 justify-start items-center "
+          class="z-100 flex w-full absolute lg:relative px-8 py-2 sm:p-8 md:p-0 top-0 left-0 justify-start items-center "
         >
-          <div class="w-2/4 flex md:justify-start lg:justify-center md:items-center lg:-mr-8">
-            <a class="pt-2 md:pl-8 lg:pl-16 xl:pl-20 lg:pr-12 xl:pr-16" href="../starter-code/index.html">
-              <img class="" src="./assets/shared/logo.svg" alt=""
+          <div class="w-full md:w-1/5 lg:w-full flex md:justify-start lg:justify-center md:items-center lg:-mr-8">
+            <a id="logo" class="pt-2 md:pl-8 lg:pl-16 xl:pl-20 lg:pr-12 xl:pr-16" href="../starter-code/index.html">
+              <img class="w-3/4 lg:w-full" src="./assets/shared/logo.svg" alt=""
             /></a>
             <div
               class="hidden lg:block border-solid border-b border-dark-gray w-full z-100"
             ></div>
           </div>
           <div
-            class="px-4 cursor-pointer flex w-full justify-end p-8 md:hidden"
+            class="p-8 cursor-pointer flex w-full justify-end  md:hidden"
             id="burger"
             @click="toggleMenu"
           >
@@ -43,7 +43,7 @@
           </div>
           <div
             id="menu"
-            class="hidden w-full font-barlowCondensed uppercase text-base tracking-nav backdrop-blur-5xl md:backdrop-blur-4xl md:flex justify-start items-center md:px-16 md:pt-8 md:w-full"
+            class="hidden w-full font-barlowCondensed uppercase text-base tracking-nav backdrop-blur-5xl md:backdrop-blur-4xl md:flex justify-start lg:justify-center items-center md:px-16 md:pt-8"
           >
             <div
               class="cursor-pointer md:hidden flex justify-end pr-16 py-8"
@@ -61,7 +61,7 @@
               class="flex flex-col md:flex-row justify-start pl-12 md:pl-0 gap-12 pr-24 sm:pr-40 md:pr-0 pb-48 md:pb-0"
             >
               <a
-                class="hover:border-white/50 hover:border-solid hover:border-b-2 transition-all duration-75 ease-linear"
+                class="border-white border-solid border-b-2 hover:border-white/50 hover:border-solid hover:border-b-2 transition-all duration-75 ease-linear"
                 href="../starter-code/index.html"
                 ><div
                   class="mb-6 flex gap-3 justify-start md:justify-center items-center"
@@ -70,7 +70,7 @@
                 </div></a
               >
               <a
-                class="border-white border-solid border-b-2 hover:border-white/50 hover:border-solid hover:border-b-2 transition-all duration-75 ease-linear"
+                class= "hover:border-white/50 hover:border-solid hover:border-b-2 transition-all duration-75 ease-linear"
                 href="../starter-code/destination-moon.html"
                 ><div
                   class="mb-6 flex gap-3 justify-start md:justify-center items-center"
