@@ -64,6 +64,9 @@ Coping and pasting of reusable codes throughout a project is not an effective pr
 
 I want incorporate the use of vue components for reusable codes in projects. For example, the navigation bar of this project should have been a component rather than being copied and pasted throughout the project.
 
+UPDATE
+I made use of component and router for navigating through the website
+
 ## Author
 
 - Author - [Precious Hobobo]
